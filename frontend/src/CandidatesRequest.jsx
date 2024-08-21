@@ -112,16 +112,16 @@ function CombinedListForm() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-      <h1 className="text-5xl font-bold text-center mb-12 text-indigo-900">
+    <div className="container mx-auto px-4 py-12 bg-gradient-to-br   min-h-screen" dir="rtl">
+      <h1 className="text-5xl font-bold text-center  mb-12 text-green-900">
         {formType === "local" ? "نموذج القائمة المحلية" : "نموذج قائمة الحزب"}
       </h1>
       <div className="flex justify-center mb-8 space-x-4">
         <button
           onClick={() => setFormType("local")}
-          className={`px-6 py-3 rounded-xl font-bold text-lg ${
+          className={`px-6 py-3 rounded-r-xl font-bold  text-lg ${
             formType === "local"
-              ? "bg-indigo-600 text-white"
+              ? "bg-green-600 text-white"
               : "bg-gray-200 text-gray-700"
           }`}
         >
@@ -129,9 +129,9 @@ function CombinedListForm() {
         </button>
         <button
           onClick={() => setFormType("party")}
-          className={`px-6 py-3 rounded-xl font-bold text-lg ${
+          className={`px-6 py-3 rounded-l-xl font-bold text-lg ${
             formType === "party"
-              ? "bg-indigo-600 text-white"
+              ? "bg-green-600 text-white"
               : "bg-gray-200 text-gray-700"
           }`}
         >
@@ -156,7 +156,7 @@ function CombinedListForm() {
                 id="listName"
                 value={listName}
                 onChange={(e) => setListName(e.target.value)}
-                className="w-full px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                className="w-full px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:border-green-500  text-lg"
                 required
               />
             </div>
@@ -172,7 +172,7 @@ function CombinedListForm() {
                 id="circleId"
                 value={circleId}
                 onChange={(e) => setCircleId(e.target.value)}
-                className="w-full px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                className="w-full px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors text-lg"
                 required
               />
             </div>
@@ -183,7 +183,7 @@ function CombinedListForm() {
               {candidates.map((candidate, index) => (
                 <div key={index} className="mb-4 p-4 bg-gray-50 rounded-xl">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-lg font-semibold text-indigo-700">
+                    <span className="text-lg font-semibold text-green-700">
                       المرشح {index + 1}
                     </span>
                     {index !== 0 && (
@@ -202,7 +202,7 @@ function CombinedListForm() {
                     onChange={(e) =>
                       handleCandidateChange(index, "nationalId", e.target.value)
                     }
-                    className="w-full px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg mb-2"
+                    className="w-full px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors text-lg mb-2"
                     placeholder="أدخل الرقم الوطني"
                     required
                   />
@@ -216,7 +216,7 @@ function CombinedListForm() {
                         e.target.value
                       )
                     }
-                    className="w-full px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                    className="w-full px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors text-lg"
                     placeholder="أدخل نوع المقعد"
                     required
                   />
@@ -225,7 +225,7 @@ function CombinedListForm() {
               <button
                 type="button"
                 onClick={handleAddCandidate}
-                className="mt-4 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center"
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center"
               >
                 <UserPlus size={24} className="mr-2" />
                 إضافة مرشح آخر
@@ -245,7 +245,7 @@ function CombinedListForm() {
                 id="partySelect"
                 value={selectedPartyId}
                 onChange={(e) => setSelectedPartyId(e.target.value)}
-                className="w-full px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                className="w-full px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors text-lg"
                 required
               >
                 <option value="">اختر حزبًا</option>
@@ -266,7 +266,7 @@ function CombinedListForm() {
                     type="text"
                     value={member.nationalId}
                     onChange={(e) => handleMemberChange(index, e.target.value)}
-                    className="flex-grow px-4 py-3 text-gray-700 border-2 border-indigo-200 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                    className="flex-grow px-4 py-3 text-gray-700 border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors text-lg"
                     placeholder="أدخل الرقم الوطني"
                     required
                   />
@@ -284,7 +284,7 @@ function CombinedListForm() {
               <button
                 type="button"
                 onClick={handleAddMember}
-                className="mt-4 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center"
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center"
               >
                 <UserPlus size={24} className="mr-2" />
                 إضافة عضو آخر

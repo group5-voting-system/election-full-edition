@@ -30,6 +30,7 @@ import ServiceForm from "./page/adminDash/mulitformservices.jsx";
 import Update_password from "./page/update_password.jsx";
 import VotingResults from "./partyresult.jsx";
 
+
 // import Home from "./page/Home";
 function App() {
   return (

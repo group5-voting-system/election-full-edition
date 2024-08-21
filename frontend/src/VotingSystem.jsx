@@ -158,7 +158,7 @@ const VotingSystem = () => {
     <div className="container mx-auto px-4 py-8 text-right">
       {/* <h1 className="text-3xl font-bold text-center mb-8">نظام التصويت</h1> */}
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold my-12">شارك بحقك الإنتخابي</h2>
+        <h2 className="text-2xl font-semibold my-12">مارس حقك الإنتخابي</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Array.isArray(lists) && lists.length > 0 ? (
             lists.map((list) => (
@@ -263,7 +263,7 @@ const VotingSystem = () => {
         )}
       </div>
       {showConfirmation && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+        <div className="fixed  z-50	inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-4">
             <h2 className="text-lg font-bold mb-4">تأكيد التصويت</h2>
             <p className="mb-4">

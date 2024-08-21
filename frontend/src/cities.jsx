@@ -5,10 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 const GridItem = ({ city, circle_num, onClick, clickable }) => (
   <div 
-    className={`bg-white p-4 rounded-lg shadow-md flex flex-col items-center ${clickable ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+  className={`bg-white p-4 rounded-lg shadow-md flex flex-col hover:scale-105 transition-transform duration-300 items-center ${clickable ? 'cursor-pointer shadow-green-800' : 'cursor-not-allowed'}`}
+
     onClick={clickable ? onClick : undefined}
   >
-    <div className="w-40 h-40 mb-4">
+    <div className="w-40 h-40 mb-4 ">
       <img src={flag} alt="علم الأردن" className="w-full h-full object-cover" />
     </div>
     <p className="text-lg font-semibold mb-2">{city}</p>
@@ -65,8 +66,7 @@ const ArabicGrid = () => {
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {data.map((item, index) => {
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 ">          {data.map((item, index) => {
             const isClickable = (circleId === '3' && item.city === 'عمان' && item.circle_num === 'الثالثة') ||
                                 (circleId === '2' && item.city === 'الزرقاء' && item.circle_num === 'الأولى') ||
                                 (circleId === '1' && item.city === 'عمان' && item.circle_num === 'الأولى');
@@ -78,6 +78,7 @@ const ArabicGrid = () => {
                 circle_num={item.circle_num} 
                 onClick={handleClick} 
                 clickable={isClickable} 
+               
               />
             );
           })}

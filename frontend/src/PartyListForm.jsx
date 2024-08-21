@@ -68,7 +68,7 @@ function PartyListForm() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div className="container mx-auto px-4 py-12 bg-gradient-to-br from-green-50 to-indigo-100 min-h-screen" dir="rtl">
       <h1 className="text-5xl font-bold text-center mb-12 text-indigo-900">
         نموذج قائمة الحزب
       </h1>

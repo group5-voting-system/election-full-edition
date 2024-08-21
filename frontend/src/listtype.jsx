@@ -89,17 +89,17 @@ const ElectionCircleSelection = () => {
       navigate("/partyVote");
     }
   };
-
+  
   return (
     <div
-      style={{
-        backgroundImage: `url(${background2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+    style={{
+      backgroundImage: `url(${background2})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
         alignItems: "center",
       }}
     >
@@ -111,7 +111,7 @@ const ElectionCircleSelection = () => {
           <button
             key={index}
             onClick={() => handleButtonClick(circle)}
-            className="bg-white text-gray-900 w-[18rem] h-[15rem] rounded-lg p-6 flex flex-col items-center justify-center transition-all duration-300 hover:bg-black hover:text-white transform hover:scale-105 shadow-lg"
+            className="bg-white text-2xl	font-bold leading-10	 w-[18rem] h-[15rem] rounded-lg p-6 flex flex-col items-center justify-center transition-all duration-300 hover:bg-black hover:text-white transform hover:scale-105 shadow-lg"
           >
             {circle}
             <br />
